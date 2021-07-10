@@ -1,0 +1,19 @@
+.playCard{
+    width: 100px;
+    height: 100px;
+    border: darkblue 1px solid;
+    cursor: pointer;
+}
+
+.playCard:hover{
+    border: aqua;
+    transition: 0.5s;
+}
+
+.playCard.back{
+    background-color: grey;
+}
+
+.playCard.face{
+    background-color: yellow;
+}

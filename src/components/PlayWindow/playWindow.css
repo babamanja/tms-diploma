@@ -1,0 +1,9 @@
+.playWindow{
+    width: 500px;
+    height: 500px;
+    border: red 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
