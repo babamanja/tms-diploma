@@ -1,42 +1,50 @@
 [{
   "gameId": 1,
   "picAddress": "../public/gallery/bu.png",
-  "active": false
+  "active": false,
+  "opened": false
 },
 {
   "gameId": 2,
   "picAddress": "../public/gallery/po.png",
-  "active": false
+  "active": false,
+  "opened": false
 },
   {
     "gameId": 3,
     "picAddress": "../public/gallery/hanna.png",
-    "active": false
+    "active": false,
+    "opened": false
   },
   {
     "gameId": 4,
     "picAddress": "../public/gallery/gisgust.png",
-    "active": false
+    "active": false,
+    "opened": false
   },
   {
-    "gameId": -1,
-    "picAddress": "../public/gallery/bu.png",
-    "active": false
-  },
+  "gameId": -1,
+  "picAddress": "../public/gallery/bu.png",
+  "active": false,
+  "opened": false
+},
   {
     "gameId": -2,
     "picAddress": "../public/gallery/po.png",
-    "active": false
+    "active": false,
+    "opened": false
   },
   {
     "gameId": -3,
     "picAddress": "../public/gallery/hanna.png",
-    "active": false
+    "active": false,
+    "opened": false
   },
   {
     "gameId": -4,
     "picAddress": "../public/gallery/gisgust.png",
-    "active": false
+    "active": false,
+    "opened": false
   }
 ]
 

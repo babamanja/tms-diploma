@@ -1,10 +1,9 @@
 import './playCard.css'
-import {useEffect, useState} from "react";
 
-export const PlayCard = ({gameId, onclick, cardIsActive = false}) => {
+export const PlayCard = ({gameId, onclick, cardIsActive = false, cardIsOpened = false}) => {
 
     return (
-        <div className={cardIsActive ? 'playCard face' : 'playCard back'} onClick={onclick}>
+        <div className={cardIsActive || cardIsOpened ? 'playCard face' : 'playCard back'} onClick={onclick}>
 
         </div>
     )

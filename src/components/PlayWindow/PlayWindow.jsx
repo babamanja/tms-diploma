@@ -1,58 +1,72 @@
 import './playWindow.css'
 import {PlayCard} from "../PlayCard";
 import {Button} from "../Button";
-import {useEffect, useState} from "react";
-import cardsArr from '../../cards.json'
+import {useEffect} from "react";
+import {useDispatch, useSelector} from 'react-redux'
+import {ACTIONS} from "../../redux/constants";
+import {Header} from "../Header";
 
 
 const getID = () => {
     return "_" + Math.random().toString(36).substr(2, 9);
 }
-const getRand = () => {
-    return (Math.floor((Math.random() * 8)))
-}
-
 
 export const PlayWindow = () => {
-    const [gameCards, setGameCards] = useState([])
+
+    const cardSet = useSelector((store) => store.playWindowReducer.cardSet)
+    const smallCount = useSelector((store) => store.playWindowReducer.smallCounter)
+    const timeCounter = useSelector((store) => store.countersReducer.timeCounter)
+    const moveCounter = 0
+    const dispatch = useDispatch()
 
 
-    const shuffleCards = () => {
-        for (let i = 0; i < 8; i++) {
-            let j = getRand();
-            [cardsArr[i], cardsArr[j]] = [cardsArr[j], cardsArr[i]]
+    useEffect(() => {
+        if (smallCount === 2) {
+            setTimeout(() => {
+                dispatch({type:ACTIONS.ZERO_SMALL_COUNTER})
+                dispatch({type: ACTIONS.DEACTIVATE_CARDS})
+            }, 1000)
         }
-        return cardsArr
-    }
+    }, [smallCount, cardSet])
 
-    const startGame = () => {
-        setGameCards(shuffleCards())
-    }
+    useEffect(() => {
+        setInterval(() => {dispatch({type: ACTIONS.START_TIMER})}
+            , 2000)
+    })
 
-    const activateCard = (cardId) => {
-        gameCards.map(card => card.gameId === cardId ? card.active = true : null)
-        return gameCards
-    }
 
-    const onClickCard = (cardId) => {
-        setGameCards(activateCard(cardId))
+    const onClickCard = (cardId, cardActive) => {
+        if (!cardActive && smallCount !== 2) {
+            dispatch({type: ACTIONS.ACTIVATE_CARD, cardId})
+            dispatch({type: ACTIONS.UP_SMALL_COUNTER})
+        if (smallCount === 0){
+            dispatch({type: ACTIONS.SET_BIG_COUNTER, cardId})}
+        if (smallCount === 1){
+            dispatch({type: ACTIONS.OPEN_CARDS, cardId})
+        }
+        }
     }
 
     return (
-        <div className='playWindow'>
-            {gameCards.map((card) => {
+        <div>
+            <Header time={timeCounter} moves={moveCounter}/>
+            <div className='playWindow'>
+            {cardSet.map((card) => {
                 return (
                     <PlayCard
                         key={getID()}
                         gameId={card.gameId}
                         cardIsActive={card.active}
+                        cardIsOpened={card.opened}
                         onclick={() => {
-                            onClickCard(card.gameId)
+                            onClickCard(card.gameId, card.active)
                         }}/>)
             })
             }
+            </div>
             <Button onclick={() => {
-                startGame()
+                dispatch({type: ACTIONS.CREATE_CARDSET})
+                dispatch({type: ACTIONS.SHUFFLE_CARDS})
             }} text='Generate Array'/>
         </div>
     )
