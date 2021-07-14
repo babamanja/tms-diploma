@@ -1,48 +1,145 @@
-[{
-  "gameId": 1,
-  "picAddress": "../public/gallery/bu.png",
-  "active": false,
-  "opened": false
-},
-{
-  "gameId": 2,
-  "picAddress": "../public/gallery/po.png",
-  "active": false,
-  "opened": false
-},
+[
   {
-    "gameId": 3,
-    "picAddress": "../public/gallery/hanna.png",
+    "gameId": 1,
+    "picAddress": "gallery/bu.png",
     "active": false,
     "opened": false
   },
   {
-    "gameId": 4,
-    "picAddress": "../public/gallery/gisgust.png",
+    "gameId": -1,
+    "picAddress": "gallery/bu.png",
     "active": false,
     "opened": false
   },
   {
-  "gameId": -1,
-  "picAddress": "../public/gallery/bu.png",
-  "active": false,
-  "opened": false
-},
+    "gameId": 2,
+    "picAddress": "gallery/po.png",
+    "active": false,
+    "opened": false
+  },
   {
     "gameId": -2,
-    "picAddress": "../public/gallery/po.png",
+    "picAddress": "gallery/po.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 3,
+    "picAddress": "gallery/hanna.png",
     "active": false,
     "opened": false
   },
   {
     "gameId": -3,
-    "picAddress": "../public/gallery/hanna.png",
+    "picAddress": "gallery/hanna.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 4,
+    "picAddress": "gallery/disgust.png",
     "active": false,
     "opened": false
   },
   {
     "gameId": -4,
-    "picAddress": "../public/gallery/gisgust.png",
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 5,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -5,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 6,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -6,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 7,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -7,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 8,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -8,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 9,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -9,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 10,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -10,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 11,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -11,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": 12,
+    "picAddress": "gallery/disgust.png",
+    "active": false,
+    "opened": false
+  },
+  {
+    "gameId": -12,
+    "picAddress": "gallery/disgust.png",
     "active": false,
     "opened": false
   }

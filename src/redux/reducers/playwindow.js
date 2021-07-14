@@ -6,22 +6,22 @@ const defaultState = {
     smallCounter: 0,
     bigCounter: 0,
     timeCounter: 0,
-    movesCounter: 0
+    movesCounter: 0,
+    isWin: false
 }
 const getRand = () => {
-    return (Math.floor((Math.random() * 8)))
+    return (Math.floor((Math.random() * 24)))
 }
 
-export function playWindowReducer(state, action) {
+export function playWindowReducer(state = defaultState, action) {
     switch (action.type) {
         case ACTIONS.CREATE_CARDSET: {
-            let newSet = state.cardSet
-            newSet = cardsArr
+            let newSet = cardsArr
             return {...state, cardSet: newSet}
         }
         case ACTIONS.SHUFFLE_CARDS: {
             let newSet = state.cardSet
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 24; i++) {
                 let j = getRand();
                 [newSet[i], newSet[j]] = [newSet[j], newSet[i]]
             }
@@ -46,14 +46,12 @@ export function playWindowReducer(state, action) {
         }
 
         case ACTIONS.ZERO_SMALL_COUNTER: {
-            let newCount = state.smallCounter
-            newCount = 0
+            let newCount = 0
             return {...state, smallCounter: newCount}
         }
 
         case ACTIONS.SET_BIG_COUNTER: {
-            let newCount = state.bigCounter
-            newCount = action.cardId
+            let newCount = action.cardId
             return {...state, bigCounter: newCount}
         }
 
@@ -67,18 +65,31 @@ export function playWindowReducer(state, action) {
             newCounter = 0
             return {...state, cardSet: newSet, bigCounter: newCounter}
         }
+
+        case ACTIONS.TEST_ALL_OPENED: {
+            let newSet = state.cardSet
+            newSet = newSet.map(card => card ? {...card, opened: card.opened = true} : card)
+            return {...state, cardSet: newSet}
+        }
+
         default:
-            return defaultState
+            return state
     }
 }
 
-export function countersReducer (state, action){
+export function countersReducer (state = defaultState, action){
     switch (action.type){
-        case ACTIONS.START_TIMER: {
-            let newTimer = state.timeCounter
-            console.log(newTimer)
+        case ACTIONS.UP_TIMER: {
+            let newTimer = state.timeCounter +1
             return {...state, timeCounter: newTimer}
         }
-        default: return defaultState
+
+        case ACTIONS.UP_MOVE_COUNTER: {
+            let newCount = state.movesCounter +1
+            return {...state, movesCounter: newCount}
+        }
+
+
+        default: return state
     }
 }

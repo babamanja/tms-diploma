@@ -1,9 +1,21 @@
 .playWindow{
-    width: 500px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 150px;
+    width: 80vw;
+    height: 80vh;
+
     border: red 1px solid;
+}
+
+.cardsPane{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 80vh;
+
 }
