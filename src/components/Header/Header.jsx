@@ -1,12 +1,9 @@
 import './header.css'
 import {useSelector} from "react-redux";
-import {useEffect} from "react";
-import {ACTIONS} from "../../redux/constants";
-
 
 export const Header = ({time, moves}) => {
-    const timeCounter = useSelector((store) => store.countersReducer.timeCounter);
-    const moveCounter = useSelector((store) => store.countersReducer.movesCounter);
+    const timeCounter = useSelector((store) => store.playWindowReducer.timeCounter);
+    const moveCounter = useSelector((store) => store.playWindowReducer.movesCounter);
 
 
     return <div className='header'>
