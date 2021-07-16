@@ -1,7 +1,7 @@
 import './playCard.css'
 
 export const PlayCard = ({gameId, onclick, cardIsActive = false, cardIsOpened = false, backgroundImage}) => {
-    const backImage = 'https://sib.fm/storage/article/March2021/IDsV2DD5Qhwj5kWTpfYG.jpeg'
+    const backImage = 'gallery/rik.png'
     return (
         <div className={'playCard'}
              onClick={onclick}

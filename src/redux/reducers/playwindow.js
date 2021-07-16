@@ -82,6 +82,7 @@ export function playWindowReducer(state = defaultState, action) {
             let isAllOpened = state.cardSet.every((card) => card.opened);
             return {...state, isWin: isAllOpened}
         }
+
         case ACTIONS.RESET_ALL: {
             return defaultState
         }
