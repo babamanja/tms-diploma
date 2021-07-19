@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    flex-wrap: wrap-reverse;
 }
 .counters {
     display: flex;
@@ -14,8 +15,16 @@
 }
 .counters * {
     margin: 5px;
-    width: 70px;
+    width: 80px;
+}
+
+.header .buttons{
+    flex-wrap: nowrap;
+    margin-right: -20px;
+
+
 }
 .buttons *{
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
