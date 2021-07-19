@@ -1,5 +1,5 @@
 import {combineReducers, createStore, compose, applyMiddleware} from 'redux'
-import {countersReducer, playWindowReducer} from './reducers'
+import {playWindowReducer} from './reducers'
 import  createSagaMiddleWare from 'redux-saga'
 import {timerSaga} from "./sagas";
 const composeEnhancers =
@@ -9,8 +9,7 @@ const sagaMiddleWare = createSagaMiddleWare()
 
 export const store = createStore(
     combineReducers({
-        playWindowReducer,
-        countersReducer
+        playWindowReducer
     }),
     composeEnhancers(
         applyMiddleware(sagaMiddleWare)
