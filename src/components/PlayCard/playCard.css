@@ -2,11 +2,12 @@
     width: 9vw;
     height: 9vw;
     margin: 3px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-size: cover;
 }
 .playCard:hover{
     cursor: pointer;
-    border: 1px solid #DCDCDC;
+    transition: 0.4s;
+    box-shadow: #949494 3px 3px 3px 3px;
 }
 

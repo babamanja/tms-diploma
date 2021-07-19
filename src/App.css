@@ -4,4 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #474747;
+}
+
+.App p{
+  font-size: 20px;
 }

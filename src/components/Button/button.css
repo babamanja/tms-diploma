@@ -3,6 +3,11 @@
     width: 120px;
     padding: 10px;
     border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: #949494 3px 3px 3px 3px;
+    color: #474747;
+    font-size: 15px;
 }
 
 .button:hover{

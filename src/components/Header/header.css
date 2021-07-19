@@ -9,10 +9,14 @@
 .counters {
     display: flex;
     flex-direction: row;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: #949494 3px 3px 3px 3px;
 }
 
 .counters * {
     margin: 5px;
+    width: 70px;
 }
 
 .buttons *{

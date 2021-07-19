@@ -5,8 +5,6 @@ import {useDispatch, useSelector} from 'react-redux'
 import {ACTIONS} from "../../redux/constants";
 import {Header} from "../Header";
 import {useHistory} from "react-router-dom"
-import {Button} from "../Button";
-
 
 export const PlayWindow = () => {
 

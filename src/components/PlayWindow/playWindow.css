@@ -12,6 +12,6 @@
     justify-content: center;
     width: 80vw;
     height: 80vh;
-    border: 1px solid;
     border-radius: 10px;
+    box-shadow: #949494 3px 3px 3px 3px;
 }

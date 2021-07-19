@@ -12,7 +12,7 @@ export const Header = () => {
 
     return <div className='header'>
         <div className='counters'>
-            <div>Time: {timeCounter}</div>
+            <div>Time: {timeCounter}s</div>
             <div>Moves: {moveCounter}</div>
         </div>
         <div className='buttons'>
@@ -27,7 +27,7 @@ export const Header = () => {
             <Button classname='button' onclick={() => {
                 dispatch({type: ACTIONS.STOP_TIMER})
                 dispatch({type: ACTIONS.RESET_ALL})
-            }} text='To first page'/>
+            }} text='To First Page'/>
             </Link>
         </div>
     </div>

@@ -23,7 +23,7 @@ export const WinWindow = () => {
         <div>
             <div className='welcomepage'>
                 <h2>Congrats!</h2>
-                <p>Time: {timeCounter}</p>
+                <p>Time: {timeCounter} seconds</p>
                 <p>Moves: {movesCounter}</p>
                 <h3>Win! Win! Win!</h3>
                 <div className='buttons'>
@@ -31,7 +31,7 @@ export const WinWindow = () => {
                     <Button className='button' onclick={onclick} text='Play Again' classname='button'/>
                 </Link>
                 <Link to='/tms-diploma/'>
-                    <Button classname='button' text='To first page'/>
+                    <Button classname='button' text='To First Page'/>
                 </Link>
                 </div>
             </div>
