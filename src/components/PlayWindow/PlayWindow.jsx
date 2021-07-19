@@ -21,7 +21,7 @@ export const PlayWindow = () => {
         dispatch({type: ACTIONS.CREATE_CARDSET})
         dispatch({type: ACTIONS.SHUFFLE_CARDS})
         dispatch({type: ACTIONS.START_TIMER})
-    },[])
+    },[dispatch])
 
     useEffect(() => {
         if (smallCount === 2) {
@@ -31,14 +31,13 @@ export const PlayWindow = () => {
                 dispatch({type: ACTIONS.CHECK_IF_WIN})
             }, 700)
         }
-    }, [smallCount, cardSet])
+    }, [smallCount, cardSet, dispatch])
 
     useEffect(()=>{
         if(isWin) {
             dispatch({type:ACTIONS.STOP_TIMER})
-            redirect.push('/tms-diploma/win')
-            console.log(isWin)}
-    },[isWin])
+            redirect.push('/tms-diploma/win')}
+    },[isWin, dispatch, redirect])
 
     const onClickCard = (cardId, cardActive, cardOpened) => {
         if (!cardOpened && !cardActive && smallCount < 2) {

@@ -3,9 +3,7 @@ import {Button} from "../Button";
 import React from "react";
 import './welcomepage.css'
 
-
 export const WelcomePage = () => {
-
     return (
         <div className='welcomepage'>
             <h2>Hello, my friend!</h2>
