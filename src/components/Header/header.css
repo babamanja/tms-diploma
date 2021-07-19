@@ -9,5 +9,12 @@
 .counters {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+
+.counters * {
+    margin: 5px;
+}
+
+.buttons *{
+    margin-left: 10px;
 }

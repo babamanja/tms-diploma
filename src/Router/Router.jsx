@@ -15,9 +15,9 @@ export default function GameRouter() {
     return (
         <div className='mainWindow'>
             <Router>
-                <Route exact path="/" component={WelcomePage}/>
-                <Route path="/game" component={PlayWindow}/>
-                <Route path="/win" component={WinWindow}/>
+                <Route exact path="/tms-diploma" component={WelcomePage}/>
+                <Route path="/tms-diploma/game" component={PlayWindow}/>
+                <Route path="/tms-diploma/win" component={WinWindow}/>
             </Router>
         </div>
     )

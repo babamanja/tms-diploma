@@ -2,6 +2,7 @@ import './header.css'
 import {useDispatch, useSelector} from "react-redux";
 import {ACTIONS} from "../../redux/constants";
 import {Button} from "../Button";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     const dispatch = useDispatch()
@@ -14,13 +15,20 @@ export const Header = () => {
             <div>Time: {timeCounter}</div>
             <div>Moves: {moveCounter}</div>
         </div>
-        <div><Button classname='button' onclick={() => {
-            dispatch({type: ACTIONS.STOP_TIMER})
-            dispatch({type: ACTIONS.RESET_ALL})
-            dispatch({type: ACTIONS.CREATE_CARDSET})
-            dispatch({type: ACTIONS.SHUFFLE_CARDS})
-            dispatch({type: ACTIONS.START_TIMER})
-        }} text='Restart'/></div>
-
+        <div className='buttons'>
+            <Button classname='button' onclick={() => {
+                dispatch({type: ACTIONS.STOP_TIMER})
+                dispatch({type: ACTIONS.RESET_ALL})
+                dispatch({type: ACTIONS.CREATE_CARDSET})
+                dispatch({type: ACTIONS.SHUFFLE_CARDS})
+                dispatch({type: ACTIONS.START_TIMER})
+            }} text='Restart'/>
+            <Link to='/tms-diploma/'>
+            <Button classname='button' onclick={() => {
+                dispatch({type: ACTIONS.STOP_TIMER})
+                dispatch({type: ACTIONS.RESET_ALL})
+            }} text='To first page'/>
+            </Link>
+        </div>
     </div>
 }

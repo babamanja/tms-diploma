@@ -3,6 +3,7 @@ import {Button} from "../Button";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {ACTIONS} from "../../redux/constants";
+import React from "react";
 
 export const WinWindow = () => {
 
@@ -20,12 +21,20 @@ export const WinWindow = () => {
 
     return (
         <div>
-            WIN!
-            Time: {timeCounter}
-            Moves: {movesCounter}
-            <Link to="/game">
-                <Button className='button' onclick={onclick} text='Play Again' classname='button'/>
-            </Link>
+            <div className='welcomepage'>
+                <h2>Congrats!</h2>
+                <p>Time: {timeCounter}</p>
+                <p>Moves: {movesCounter}</p>
+                <h3>Win! Win! Win!</h3>
+                <div className='buttons'>
+                <Link to="/tms-diploma/game">
+                    <Button className='button' onclick={onclick} text='Play Again' classname='button'/>
+                </Link>
+                <Link to='/tms-diploma/'>
+                    <Button classname='button' text='To first page'/>
+                </Link>
+                </div>
+            </div>
         </div>
     )
 }

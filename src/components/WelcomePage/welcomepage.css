@@ -1,0 +1,10 @@
+.welcomepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomepage *{
+    margin: 10px;
+}

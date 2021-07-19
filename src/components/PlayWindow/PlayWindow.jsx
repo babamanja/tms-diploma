@@ -38,7 +38,7 @@ export const PlayWindow = () => {
     useEffect(()=>{
         if(isWin) {
             dispatch({type:ACTIONS.STOP_TIMER})
-            redirect.push('/win')
+            redirect.push('/tms-diploma/win')
             console.log(isWin)}
     },[isWin])
 
