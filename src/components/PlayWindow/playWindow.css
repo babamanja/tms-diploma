@@ -1,15 +1,10 @@
 .playWindow{
     display: flex;
     flex-direction: column;
-    min-width: 300px;
-    min-height: 150px;
-    width: 80vw;
-    height: 80vh;
-
-    border: red 1px solid;
 }
 
 .cardsPane{
+    margin: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,5 +12,6 @@
     justify-content: center;
     width: 80vw;
     height: 80vh;
-
+    border: 1px solid;
+    border-radius: 10px;
 }

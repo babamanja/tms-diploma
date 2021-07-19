@@ -2,10 +2,9 @@ import {ACTIONS} from "../constants";
 import {put, takeEvery, delay, select, take, call, race} from 'redux-saga/effects'
 
 export function* timerSagaWorker() {
-    const cardSet = yield select((store) => store.playWindowReducer.cardSet);
-    let isAllOpened = cardSet.every((card) => card.opened);
+    const isWin = yield select((store) => store.playWindowReducer.isWin);
 
-    while (!isAllOpened) {
+    while (!isWin) {
         yield delay(1000);
         yield put({type: ACTIONS.UP_TIMER});
     }

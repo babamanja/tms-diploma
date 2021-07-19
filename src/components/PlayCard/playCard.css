@@ -1,22 +1,12 @@
 .playCard{
     width: 9vw;
     height: 9vw;
-    cursor: pointer;
     margin: 3px;
     border-radius: 5px;
     background-size: cover;
 }
-
 .playCard:hover{
-    border: aqua 1px solid;
-    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid #DCDCDC;
 }
 
-/*.playCard.back{*/
-/*    background-color: grey;*/
-/*}*/
-
-/*.playCard.face{*/
-/*    background-color: yellow;*/
-
-/*}*/

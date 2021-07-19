@@ -1,17 +1,17 @@
 import './App.css';
-import { MainWindow } from "./components/MainWindow";
-import { Provider } from "react-redux";
-import { store } from "./redux"
+import {Provider} from "react-redux";
+import {store} from "./redux"
+import GameRouter from "./Router/Router";
 
 
 function App() {
-  return (
-      <Provider store={store}>
-    <div className="App">
-      <MainWindow/>
-    </div>
-      </Provider>
-  );
+    return (
+        <Provider store={store}>
+            <div className="App">
+                <GameRouter/>
+            </div>
+        </Provider>
+    );
 }
 
 export default App;
