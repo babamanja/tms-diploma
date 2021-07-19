@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tms-diploma/static/css/main.4eb1190d.chunk.css",
-    "main.js": "/tms-diploma/static/js/main.9fe4e0c5.chunk.js",
-    "main.js.map": "/tms-diploma/static/js/main.9fe4e0c5.chunk.js.map",
+    "main.js": "/tms-diploma/static/js/main.2b8131d8.chunk.js",
+    "main.js.map": "/tms-diploma/static/js/main.2b8131d8.chunk.js.map",
     "runtime-main.js": "/tms-diploma/static/js/runtime-main.480a11e2.js",
     "runtime-main.js.map": "/tms-diploma/static/js/runtime-main.480a11e2.js.map",
     "static/js/2.2ee48151.chunk.js": "/tms-diploma/static/js/2.2ee48151.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.480a11e2.js",
     "static/js/2.2ee48151.chunk.js",
     "static/css/main.4eb1190d.chunk.css",
-    "static/js/main.9fe4e0c5.chunk.js"
+    "static/js/main.2b8131d8.chunk.js"
   ]
 }
